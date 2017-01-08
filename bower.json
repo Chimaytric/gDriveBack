@@ -1,0 +1,24 @@
+{
+  "name": "dd",
+  "version": "0.1",
+  "dependencies": {
+    "jquery": "latest",
+    "angular" : "latest",
+    "ngSmoothScroll": "latest",
+    "fontawesome": "latest"
+  },
+  "main": "index.html",
+  "authors": [
+    "SMA"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

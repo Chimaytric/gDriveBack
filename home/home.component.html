@@ -1,0 +1,61 @@
+<div class="home" ng-init="homeCtrl.getData()">
+    <ul class="menu" id="menu">
+        <li><a href="#" scroll-to="timeline">Avancement</a></li>
+        <li><a href="#" scroll-to="portrait">Qui suis-je ?</a></li>
+        <li><a href="#" scroll-to="transat">Mini quoi ?</a></li>
+        <li><a href="#" scroll-to="contact">Contact</a></li>
+    </ul>
+    <article id="timeline">
+        <h2 class="sectionTitle" >Avançons par étapes...</h2>
+        <ul class="timeline" id="timeline">
+            <li class="li complete" ng-repeat="(index, value) in homeCtrl.data['timeline']" ng-if="$even">
+                <div class="timestamp">
+                    <span class="date">{{value}}<span>
+                </div>
+                <div class="status">
+                    <h4> {{homeCtrl.data['timeline'][index+1]}} </h4>
+                </div>
+            </li>
+        </ul>
+    </article>
+    <article id="portrait">
+        <img src="images/charles.jpg"><!--
+        --><div>
+             <h2>Charles Bauzerand</h2>
+             <p ng-repeat="(index, value) in homeCtrl.data['portrait']">
+                 {{value}}
+             </p>
+        </div>
+    </article>
+    <article id="gallerie">
+        <img src="images/g1.jpeg" alt="g"><!--
+        --><img src="images/g2.jpeg" alt="g"><!--
+        --><img src="images/g3.jpeg" alt="g"><!--
+        --><img src="images/g4.jpeg" alt="g"><!--
+        --><img src="images/g5.jpeg" alt="g">
+    </article>
+    <article id="transat">
+        <div>
+            <img src="images/mini.jpg" alt="mini">
+            <h2>Petit bateau ...</h2>
+            <p ng-repeat="(index, value) in homeCtrl.data['transatBateau']">
+                {{value}}
+            </p>
+        </div><!--
+        --><div>
+            <img src="images/map.png" alt="map">
+            <h2>... grande course !</h2>
+            <p ng-repeat="(index, value) in homeCtrl.data['transatCourse']">
+                {{value}}
+            </p>
+        </div>
+    </article>
+    <article id="contact">
+        <ul>
+            <li><a href><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+            <li><a href><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+            <li><a href><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></li>
+        </ul>
+    </article>
+</div>
